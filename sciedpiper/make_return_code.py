@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+
+
 __author__ = "Timothy Tickle"
 __copyright__ = "Copyright 2015"
 __credits__ = [ "Timothy Tickle", "Brian Haas" ]

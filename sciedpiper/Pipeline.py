@@ -961,7 +961,8 @@ class Pipeline:
                     self.func_remove_paths( cmd_command = cmd_command, str_output_directory = str_output_dir,
                                             dt_dependency_tree = dt_dependencies, f_remove_products = True, f_test = not self.f_execute )
 
-                    raise RuntimeError("Command failure") # shortcutting - bhaas
+                    self.logr_logger.error("FAILED COMMAND: {}".format(cmd_command))
+                    break # stopping here
 
                 if f_success and str_compression_mode and str_compression_mode.lower() == STR_COMPRESSION_AS_YOU_GO.lower():
                     # Compress if requested, cleaning is going to remove some files so it is easiest to let that happen,
